@@ -2,5 +2,5 @@ import React from "react";
 import LogoImage from '../../Assets/logo.png';
 
 export default function Logo() {
-  return <img src={LogoImage} alt="qtify-logo" width={70}/>
+  return <img src={LogoImage} alt="qtify-logo" width={67} height={34}/>
 }
