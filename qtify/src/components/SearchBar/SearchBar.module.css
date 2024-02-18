@@ -1,0 +1,24 @@
+.SearchBar {
+  background-color: #FFFFFF;
+  width: 35vw;
+  height: 48px;
+  font-weight: 400;
+  border-radius: 8px 0px 0px 8px;
+  color: #121212;
+  font-size: 16px;
+  border-color: #121212;
+  padding-left: 20px;
+}
+.SearchBtn {
+  border-radius: 0px 8px 8px 0px;
+  background-color: #FFFFFF;
+  height: 54px;
+  width: 66px;
+  font-weight: 400;
+  color: #121212;
+  font-size: 16px;
+}
+.Container {
+  display: flex;
+  align-items: center;
+}
