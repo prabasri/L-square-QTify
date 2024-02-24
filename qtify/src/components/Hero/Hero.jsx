@@ -4,14 +4,12 @@ import HeroImage from "../../Assets/hero_headphones.png";
 
 export default function Hero() {
   return (
-    <div style={{backgroundColor: "#121212"}}>
-      <div className={styles.heroContent}>
-        <div className={styles.textDiv}>
-            <p className={styles.text}>100 Thousand Songs, ad-free</p>
-            <p className={styles.text}>Over thousands podcast episodes</p>
+      <div className={styles.hero}>
+        <div>
+            <h1 style={{margin:"10px"}}>100 Thousand Songs, ad-free</h1>
+            <h1 style={{margin:"10px"}}>Over thousands podcast episodes</h1>
         </div>
-        <img src={HeroImage} alt="hero" className={styles.heroImage}/>
+        <img src={HeroImage} alt="hero" width={212}/>
       </div>
-    </div>
   )
 }

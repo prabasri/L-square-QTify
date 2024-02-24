@@ -1,25 +1,12 @@
-.heroContent {
+.hero {
+  background-color: #121212;
+  height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.textDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 97px 20px;
-}
-.text {
-  font-size: 32px;
+  text-align: center;
   color: #FFFFFF;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif ;
-  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  gap: 30px;  /* row gap between both the rows and columns */
 }
-.heroImage {
-  width: 212px;
-  height: 212px;
 
-}

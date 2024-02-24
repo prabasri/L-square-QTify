@@ -1,0 +1,30 @@
+.slideDirection {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+
+}
+
+.carouselSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  left: 40px
+}
+
+.left, .right {
+  position: absolute;
+  top: 50%;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
