@@ -9,6 +9,10 @@ export default function HomePage() {
   const {data} = useOutletContext();
   const {newAlbums, topAlbums, songs} = data;
 
+  console.log(topAlbums);
+  console.log(newAlbums);
+  console.log(songs);
+
   // fetchFilters().then((response) => console.log(response));
 
   return (

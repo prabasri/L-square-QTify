@@ -16,7 +16,7 @@ export default function Carousel({data}) {
     let newIndex = currentIndex + 1;
     // setCurrentIndex(newIndex >= data.length ? setNextEnded(true) : newIndex);
 
-    if(newIndex >= data.length - 7) {
+    if(newIndex >= data.length - 6) {
 
       setCurrentIndex((prevIndex) => prevIndex);
       setNextEnded(true);
@@ -48,7 +48,7 @@ export default function Carousel({data}) {
   }
 
 //  console.log(data[currentIndex]);
-//  console.log(data.length);
+ console.log(data.length);
 
   return (
     <div className="carousel">
