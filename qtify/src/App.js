@@ -10,9 +10,8 @@ function App() {
   const [data, setData] = useState({});
 
   const generateData = (key, source) => {
-    console.log(data)
     source().then((data) => {
-      console.log(data)
+      // console.log(data)
       setData((prevState) => {
         return {...prevState, [key]: data}; // { topAlbums: Array(13), newAlbums: Array(10) }
       });
@@ -23,11 +22,11 @@ function App() {
     generateData("topAlbums", fetchTopAlbums);
     generateData("newAlbums", fetchNewAlbums);
     generateData("songs", fetchSongs);
-    console.log(data);
+    // console.log(data);
     }, []);
 
   const {topAlbums= [], newAlbums =[], songs = []} = data;
-  console.log(topAlbums)
+  // console.log(topAlbums);
 
   return (
     <StyledEngineProvider injectFirst>

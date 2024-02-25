@@ -3,22 +3,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 40px;
 
 }
 
 .carouselSection {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
-  left: 40px
+  left: 60px;
 }
 
 .left, .right {
   position: absolute;
-  top: 50%;
+  top: 40%;
 }
 
 .left {

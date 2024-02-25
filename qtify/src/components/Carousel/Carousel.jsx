@@ -3,8 +3,6 @@ import styles from "./Carousel.module.css"
 import Card from "../Card/Card";
 import { ReactComponent as LeftArrow } from "../../Assets/LeftArrow.svg";
 import { ReactComponent as RightArrow } from "../../Assets/RightArrow.svg";
-// import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-// import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 export default function Carousel({data}) {
 
@@ -49,8 +47,8 @@ export default function Carousel({data}) {
     }
   }
 
- console.log(data[currentIndex]);
- console.log(data.length);
+//  console.log(data[currentIndex]);
+//  console.log(data.length);
 
   return (
     <div className="carousel">

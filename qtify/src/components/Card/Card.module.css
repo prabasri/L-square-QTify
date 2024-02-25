@@ -31,5 +31,9 @@
 }
 
 .titleWrapper {
-  color: #121212;
+  color: #FFFFFF;
+}
+
+.link {
+  text-decoration: none;
 }

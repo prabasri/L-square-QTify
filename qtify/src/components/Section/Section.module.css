@@ -2,3 +2,24 @@
   display: flex;
   justify-content: space-between;
 }
+
+.section {
+  background-color: #121212;
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+.toggle {
+  color: #34C94B;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  row-gap: 20px;
+}
+
+.filtersTab {
+  margin: 20px;
+}
