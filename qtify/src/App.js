@@ -7,31 +7,59 @@ import { fetchNewAlbums, fetchSongs, fetchTopAlbums } from './api/api';
 
 function App() {
 
-  const [data, setData] = useState({});
+  // const [data, setData] = useState({});
+  const [topAlbums, setTopAlbums] = useState([]);
+  const [newAlbums, setNewAlbums] = useState([]);
+  const [songs, setSongs] = useState([]);
 
-  const generateData = (key, source) => {
+  const generateTopAlbums = (source) => {
     source().then((data) => {
-      // console.log(data)
-      setData((prevState) => {
-        return {...prevState, [key]: data}; // { topAlbums: Array(13), newAlbums: Array(12) }
-      });
+      setTopAlbums(data)
+    })
+  }
+  const generateNewAlbums = (source) => {
+    source().then((data) => {
+      setNewAlbums(data)
+    })
+  }
+  const generateSongs = (source) => {
+    source().then((data) => {
+      setSongs(data)
     })
   }
 
   useEffect(() => {
-    generateData("topAlbums", fetchTopAlbums);
-    generateData("newAlbums", fetchNewAlbums);
-    generateData("songs", fetchSongs);
-    // console.log(data);
-    }, []);
+    generateTopAlbums(fetchTopAlbums);
+    generateNewAlbums(fetchNewAlbums);
+    generateSongs(fetchSongs);
+    console.log(topAlbums);
+    console.log(newAlbums)
+  }, []);
 
-  const {topAlbums= [], newAlbums =[], songs = []} = data;
-  // console.log(topAlbums);
+  // const generateData = (key, source) => {
+  //   source().then((data) => {
+  //     // console.log(data)
+  //     setData((prevState) => {
+  //       return {...prevState, [key]: data}; // { topAlbums: Array(13), newAlbums: Array(12) }
+  //     });
+  //   })
+  // }
+
+  // useEffect(() => {
+  //   generateData("topAlbums", fetchTopAlbums);
+  //   generateData("newAlbums", fetchNewAlbums);
+  //   generateData("songs", fetchSongs);
+  //   // console.log(data);
+  //   }, []);
+
+  // const {topAlbums= [], newAlbums =[], songs = []} = data;
+  console.log(topAlbums);
 
   return (
     <StyledEngineProvider injectFirst>
       <Navbar searchData={[...topAlbums, ...newAlbums]}/>
-      <Outlet context={{ data: { topAlbums, newAlbums, songs }}} />
+      <Outlet context={{ data: { "topAlbums": topAlbums, "newAlbums": newAlbums, "songs": songs }}} />
+      {/* <Outlet context={[topAlbums, newAlbums]} /> */}
     </StyledEngineProvider>
   );
 }
