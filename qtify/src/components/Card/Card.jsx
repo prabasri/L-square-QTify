@@ -35,12 +35,12 @@ export default function Card({data, type}) {
         return (
           <div className={styles.wrapper}>
             <div className={styles.card}>
-              <img src={image} alt="song" loading="lazy"/>
-              <div>
-                <div className={styles.pill}>
-                  <p>{`${likes} Likes`}</p>
+              <img src={image} alt="song" loading="lazy" height={170} width={160} />
+                <div className={styles.banner}>
+                  <Chip
+                    label={`${likes} Likes`}
+                    className={styles.chip}/>
                 </div>
-              </div>
             </div>
             <div className={styles.titleWrapper}>{title}</div>
           </div>
