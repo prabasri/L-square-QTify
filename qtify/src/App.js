@@ -13,7 +13,7 @@ function App() {
     source().then((data) => {
       // console.log(data)
       setData((prevState) => {
-        return {...prevState, [key]: data}; // { topAlbums: Array(13), newAlbums: Array(10) }
+        return {...prevState, [key]: data}; // { topAlbums: Array(13), newAlbums: Array(12) }
       });
     })
   }
