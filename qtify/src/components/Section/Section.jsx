@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import styles from "./Section.module.css"
 import Card from "../Card/Card";
 import { CircularProgress } from "@mui/material";
-import Carousel from "../Carousel/Carousel";
-import Filters from "../Filters/Filters"
+// import Carousel from "../MyCarousel/MyCarousel";
+import Carousel from "../CarouselSwiper/Carousel";
+import Filters from "../Filters/Filters";
 
 export default function Section({title, data, filterSource, type}) {
   console.log(data);

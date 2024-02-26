@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
+// import Hero from './components/Hero/Hero';
 import {Outlet} from "react-router-dom";
 import { fetchNewAlbums, fetchSongs, fetchTopAlbums } from './api/api';
 
@@ -34,8 +34,11 @@ function App() {
     generateSongs(fetchSongs);
   }, []);
 
-  console.log(topAlbums);
-  console.log(newAlbums);
+  // console.log(topAlbums);
+  console.log("length:", topAlbums.length)
+  // console.log(newAlbums);
+  console.log("length:", newAlbums.length)
+
 
   // const generateData = (key, source) => {
   //   source().then((data) => {

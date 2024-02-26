@@ -1,0 +1,22 @@
+.wrapper {
+  width: 1384px;
+  position: relative;
+  display: flex;
+}
+.leftArrow {
+  position: absolute;
+  left: 0px;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.rightArrow {
+  position: absolute;
+  right: 0px;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}

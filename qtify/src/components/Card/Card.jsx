@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import styles from "./Card.module.css"
 
 export default function Card({data, type}) {
-  console.log(data);
+  // console.log(data);
   const getCard = (type) => {
     switch(type) {
       case "album": {
@@ -30,7 +30,7 @@ export default function Card({data, type}) {
         )
       }
       case "song": {
-        const [image, likes, title] = data;
+        const {image, likes, title} = data;
 
         return (
           <div className={styles.wrapper}>
