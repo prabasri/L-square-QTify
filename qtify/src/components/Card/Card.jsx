@@ -4,14 +4,14 @@ import {Link} from "react-router-dom";
 import styles from "./Card.module.css"
 
 export default function Card({data, type}) {
-  // console.log(data);
+  console.log(data);
   const getCard = (type) => {
     switch(type) {
       case "album": {
         const { image, follows, title, slug, songs } = data;
         return (
           <>
-          {/* <Tooltip title={`${songs.length} songs`} placement="top" arrow> */}
+          <Tooltip title={`${songs?.length} songs`} placement="top" arrow>
             <Link to={`/album/${slug}`} className={styles.link}>
               <div className={styles.wrapper}>
                 <div className={styles.card}>
@@ -25,7 +25,7 @@ export default function Card({data, type}) {
                 <div className={styles.titleWrapper}>{title}</div>
               </div>
             </Link>
-          {/* </Tooltip> */}
+          </Tooltip>
           </>
         )
       }

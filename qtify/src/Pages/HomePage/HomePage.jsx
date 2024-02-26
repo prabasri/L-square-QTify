@@ -7,6 +7,8 @@ import styles from "./HomePage.module.css";
 
 export default function HomePage() {
   const {data} = useOutletContext();
+  console.log(data)
+
   const {newAlbums, topAlbums, songs} = data;
 
   console.log(topAlbums);

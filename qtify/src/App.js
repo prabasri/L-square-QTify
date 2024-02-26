@@ -32,9 +32,10 @@ function App() {
     generateTopAlbums(fetchTopAlbums);
     generateNewAlbums(fetchNewAlbums);
     generateSongs(fetchSongs);
-    console.log(topAlbums);
-    console.log(newAlbums)
   }, []);
+
+  console.log(topAlbums);
+  console.log(newAlbums);
 
   // const generateData = (key, source) => {
   //   source().then((data) => {
@@ -53,7 +54,7 @@ function App() {
   //   }, []);
 
   // const {topAlbums= [], newAlbums =[], songs = []} = data;
-  console.log(topAlbums);
+  // console.log(topAlbums);
 
   return (
     <StyledEngineProvider injectFirst>
