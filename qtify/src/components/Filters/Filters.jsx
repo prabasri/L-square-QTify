@@ -25,14 +25,14 @@ function TabPanel( props ) {
 
 function Filters({ filters, selectedFilterIndex, setSelectedFilterIndex }) {
 
-  console.log(filters);
-  console.log(selectedFilterIndex);
+  // console.log(filters);
+  // console.log(selectedFilterIndex);
   
   const handleChange = (event, newValue) => {
     setSelectedFilterIndex(newValue);
   }
 
-  function allyProps(index) {
+  function a11yProps(index) {
     return {
       id: `simple-tab-${index}`,
       "aria-controls": `simple-tabpanel-${index}`,
@@ -44,13 +44,15 @@ function Filters({ filters, selectedFilterIndex, setSelectedFilterIndex }) {
       <Tabs
       value={selectedFilterIndex}
       onChange={handleChange}
-      aria-label="basic tabs for filter"
+      aria-label="Filter Tabs"
+      textColor="#FFFFFF"
       TabIndicatorProps={{
         style: {
           backgroundColor: "#34C94B",
+          height: "4px"
         },
       }}>
-        {filters.map((ele, idx) => <Tab className={styles.tab} label={ele.label} {...allyProps(idx)}/> )}
+        {filters.map((ele, idx) => <Tab className={styles.tab} label={ele.label} {...a11yProps(idx)}/> )}
       </Tabs>
       {/* {filters.map((ele, idx) => <TabPanel value={selectedFilterIndex} index={idx}/>)} */}
     </div>
